@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { generatePDF } from "../utils/pdfGenerator";
 
@@ -49,9 +50,11 @@ const CreditLetterList = ({ creditLetters }) => {
     <div className="credit-letter-list">
       {/* Navbar */}
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <h1>Your Credit Letters</h1>
 

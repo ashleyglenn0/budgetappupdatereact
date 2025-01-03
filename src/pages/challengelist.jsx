@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/challengelist.css";
 
 const ChallengesList = ({ challenges, globalChallenges, onEnroll }) => {
@@ -10,9 +11,11 @@ const ChallengesList = ({ challenges, globalChallenges, onEnroll }) => {
     <div className="challenges-list-container">
       {/* Navbar */}
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <h1>Available Challenges</h1>
 

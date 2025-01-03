@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/fileupload.css";
 
 const FileUpload = () => {
@@ -19,9 +20,11 @@ const FileUpload = () => {
   return (
     <>
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <div className="file-upload-container">
         <h1>Upload Documents</h1>

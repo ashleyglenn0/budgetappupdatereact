@@ -21,9 +21,11 @@ const BudgetList = ({ budgets: initialBudgets }) => {
     <div className="budget-list-page">
       {/* Navbar */}
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Log Out</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       {/* Budget Cards Grid */}
       <div className="budget-list-container">

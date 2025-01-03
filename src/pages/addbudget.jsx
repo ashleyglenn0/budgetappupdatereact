@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/addbudget.css";
 
 const AddBudget = ({ challenges, globalChallenges, onSubmit }) => {
@@ -40,9 +41,11 @@ const AddBudget = ({ challenges, globalChallenges, onSubmit }) => {
   return (
     <div className="content-container">
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <h1 className="page-header">Add Budget</h1>
       <form onSubmit={handleSubmit} className="form-container">

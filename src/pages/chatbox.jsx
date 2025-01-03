@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/chatbox.css";
 
 const Chatbot = () => {
@@ -31,9 +32,11 @@ const Chatbot = () => {
     <>
       {/* Navbar */}
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <div className="chatbot-container">
         <h1>Ask Your Credit/Budget Questions</h1>

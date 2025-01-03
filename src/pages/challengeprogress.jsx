@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/challengeprogress.css";
 
 const ChallengeProgress = ({ enrolledChallenges, onUnenroll, onComplete }) => {
@@ -21,9 +22,11 @@ const ChallengeProgress = ({ enrolledChallenges, onUnenroll, onComplete }) => {
   return (
     <div className="challenge-progress-container">
       <nav className="navbar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button">Logout</button>
-      </nav>
+          <Link to="/dashboard">
+            <button className="nav-button">Home</button>
+          </Link>
+          <button className="nav-button">Logout</button>
+        </nav>
 
       <h1>Challenge Progress</h1>
       <p>
