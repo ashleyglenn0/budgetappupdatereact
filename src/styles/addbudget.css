@@ -1,0 +1,113 @@
+.content-container {
+    padding: 20px; /* Adds padding inside the container */
+    display: flex;
+    flex-direction: column; /* Ensures items are stacked vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Aligns items at the top */
+    min-height: 100vh; /* Ensures full-page height */
+    background-color: #fff; /* White background */
+  }
+  
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Budget Item Row */
+  .budget-item-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* Form Section */
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Buttons */
+  .form-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  color: #000; /* Black text */
+  background-color: #fff; /* White background */
+  border: 1px solid #FFB6C1; /* Light pink border */
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  accent-color: #FFB6C1; /* Light pink for the checkbox when selected */
+  width: 20px;
+  height: 20px;
+  background-color: #fff; /* White background */
+  border: 1px solid #FFB6C1; /* Light pink border */
+}
+
+/* Placeholder Text */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Slightly lighter black for placeholders */
+}
+
+/* Dropdown Options */
+select option {
+  color: #000; /* Black text for dropdown options */
+  background-color: #fff; /* White background */
+}
+
+/* On Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #FF9AA2; /* Slightly darker pink on focus */
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.7);
+}
+
+input[type="checkbox"] {
+    accent-color: #FFB6C1; /* Light pink for checked state */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+
+  .page-header {
+    text-align: center; /* Ensures the header is centered horizontally */
+    margin: 20px auto; /* Adds spacing above and below */
+    font-size: 2rem; /* Adjusts font size */
+    color: #4A4A4A; /* Dark gray for readability */
+  }
+  
+
+  .cancel-button {
+    background-color: #FFC0CB; /* Light pink background */
+    color: #4A4A4A; /* Dark gray text */
+    border: 1px solid #FFB6C1; /* Light pink border */
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 65px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #FF9AA2; /* Slightly darker pink on hover */
+    color: #fff;
+  }
+  
+
+  

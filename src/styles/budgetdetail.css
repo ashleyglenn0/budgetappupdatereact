@@ -1,0 +1,135 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 228, 225, 0.9);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #ff9aa2;
+  color: white;
+}
+
+/* Budget Header */
+.budget-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.budget-header h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+.budget-header p {
+  color: gray;
+}
+
+/* Overview Section */
+.budget-overview {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.overview-card {
+  background-color: rgba(255, 228, 225, 0.9);
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 20%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overview-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.overview-card h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Income and Expenses Section */
+.income-expense-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.income-list,
+.expense-list {
+  width: 45%;
+}
+
+.income-list h2,
+.expense-list h2 {
+  text-align: left;
+}
+
+.income-list ul,
+.expense-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.income-list li,
+.expense-list li {
+  background-color: rgba(255, 228, 225, 0.9);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+/* Actions */
+.actions {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.action-button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #ff9aa2;
+  color: white;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 228, 225, 0.9);
+  padding: 1rem;
+  text-align: center;
+}

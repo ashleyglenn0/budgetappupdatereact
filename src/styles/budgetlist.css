@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 228, 225, 0.9);
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar .nav-button {
+    background-color: #FFB6C1;
+    border: none;
+    color: #4A4A4A;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .navbar .nav-button:hover {
+    background-color: #FF9AA2;
+    color: white;
+  }
+  
+  /* Budget List Page */
+  .budget-list-page {
+    padding-top: 100px; /* To accommodate fixed navbar */
+    padding-bottom: 50px; /* To accommodate footer */
+  }
+  
+  /* Grid Layout for Budget Cards */
+  .budget-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force two columns for now */
+    gap: 1.5rem; /* Add spacing between cards */
+    padding: 2rem;
+  }
+  
+  .budget-card {
+    background-color: rgba(255, 228, 225, 0.9);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  
+  .budget-card h2 {
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .budget-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .view-button {
+    background-color: #FFB6C1;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4A4A4A;
+  }
+  
+  .view-button:hover {
+    background-color: #FF9AA2;
+    color: white;
+  }
+  
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 228, 225, 0.9);
+    z-index: 100;
+    text-align: center;
+    padding: 1rem;
+    color: #4A4A4A;
+  }
+  
+  /* General Status Styles */
+/* General Status Styles */
+.budget-card {
+    background-color: rgba(255, 228, 225, 0.9);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .status.on-track {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+  }
+  
+  .status.overspent {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+  }
+  
+  .status.under-budget {
+    background-color: #fff3cd; /* Light yellow */
+    color: #856404; /* Dark yellow */
+  }
+  
+  
