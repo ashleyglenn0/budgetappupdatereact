@@ -1,0 +1,73 @@
+.challenge-progress-container {
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .points {
+    font-weight: bold;
+    color: #ff6347; /* A bright complementary color */
+  }
+  
+  .challenge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .challenge-card {
+    background-color: #ffe4e1;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .challenge-card.completed {
+    background-color: #d4edda; /* Light green for completed challenges */
+  }
+  
+  .challenge-card h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .challenge-card p {
+    margin: 0.5rem 0;
+  }
+  
+  .progress-bar-container {
+    position: relative;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Green progress */
+    border-radius: 10px;
+  }
+  
+  .unenroll-button,
+  .complete-button {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #4a4a4a;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  
+  .unenroll-button:hover,
+  .complete-button:hover {
+    background-color: #ff9aa2;
+  }
+  

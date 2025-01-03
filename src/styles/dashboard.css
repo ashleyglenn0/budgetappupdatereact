@@ -13,15 +13,11 @@
   
   /* Navbar */
   .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 228, 225, 0.9);
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
     z-index: 100;
+    background-color: #ffe4e1;
+    padding: 10px 20px;
   }
   
   .navbar .logout-button {
@@ -41,7 +37,17 @@
   
   /* Dashboard Container */
   .dashboard-container {
-    padding: 7rem 2rem 2rem; /* Adjusted padding to move welcome section down */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: white;
   }
   
   .welcome-section {
@@ -80,11 +86,11 @@
   
   /* Cards */
   .card {
-    background-color: rgba(255, 228, 225, 0.9);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffe4e1;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .card h2 {
@@ -120,32 +126,125 @@
   
   /* Actions Grid */
   .actions-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns for buttons */
+    gap: 20px; /* Space between buttons */
+    justify-content: center; /* Center-align the grid */
+    align-items: center; /* Align buttons vertically */
+    margin: 20px 0; /* Add spacing around the grid */
   }
   
   .action-button {
+    background-color: #ffb6c1; /* Light pink color */
+    border: none; /* No border */
+    padding: 0.8rem 1rem; /* Consistent padding */
+    color: #4a4a4a; /* Text color */
+    font-weight: bold; /* Bold text */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align text */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+  
+  .action-button:hover {
+    background-color: #ff9aa2; /* Highlight effect */
+    color: white; /* White text on hover */
+  }
+  
+  .action-button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px #ff9aa2; /* Highlighted shadow effect */
+  }
+  
+  
+  
+  
+  
+  /* Footer */
+  footer {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background-color: #ffe4e1;
+    padding: 10px;
+  }
+
+  .challenge-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .challenge-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0; /* Add padding around the item for better spacing */
+  }
+  
+  .challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem; /* Add padding inside the header */
+  }
+  
+  .challenge-header span {
+    flex-grow: 1; /* Make the name take up available space */
+    margin-right: 1rem; /* Space between name and button */
+  }
+  
+  .challenge-details {
+    padding: 0.5rem 1rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ffb6c1;
+    margin-top: 0.5rem;
+    border-radius: 5px; /* Add subtle rounding */
+  }
+  
+  .expand-button {
     background-color: #ffb6c1;
     border: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     color: #4a4a4a;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
   }
   
-  .action-button:hover {
+  .expand-button:hover {
     background-color: #ff9aa2;
-    color: #fff;
   }
   
-  /* Footer */
-  footer {
-    text-align: center;
-    background-color: rgba(255, 228, 225, 0.9);
-    padding: 1rem;
-    margin-top: 2rem;
-    color: #4a4a4a;
+  .unenroll-button {
+    background-color: #ff9aa2;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
   }
+  
+  .unenroll-button:hover {
+    background-color: #ff6f61;
+  }
+  
+  
+  
+  
+  /* .actions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .actions-grid button {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+  } */
+  
+  
+  
   

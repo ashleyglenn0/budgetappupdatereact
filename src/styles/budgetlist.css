@@ -46,7 +46,7 @@ body {
   /* Grid Layout for Budget Cards */
   .budget-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Force two columns for now */
+    grid-template-columns: repeat(4, 1fr); /* Force two columns for now */
     gap: 1.5rem; /* Add spacing between cards */
     padding: 2rem;
   }
@@ -122,5 +122,45 @@ body {
     background-color: #fff3cd; /* Light yellow */
     color: #856404; /* Dark yellow */
   }
+
+  .button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .view-button {
+    background-color: #ffb6c1; /* Light pink */
+    border: none;
+    color: #4A4A4A; /* Dark gray text */
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-button:hover {
+    background-color: #ff9aa2; /* Slightly darker pink on hover */
+    color: white; /* White text on hover */
+  }
+  
+  .delete-button {
+    background-color: #ffb6c1; /* Light pink */
+    border: none;
+    color: #4A4A4A; /* Dark gray text */
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff6961; /* Red for hover (optional) */
+    color: white; /* White text on hover */
+  }
+  
+  
+
   
   
