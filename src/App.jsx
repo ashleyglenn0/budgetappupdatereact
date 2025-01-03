@@ -11,6 +11,8 @@ import ChallengeProgress from "./pages/challengeprogress";
 import ChallengeList from "./pages/challengelist";
 import CreditLetterList from "./pages/creditletterlist";
 import AddLetter from "./pages/addletter";
+import Chatbox from "./pages/chatbox";
+import FileUpload from "./pages/fileupload";
 
 import budgets from "./data/budgets";
 import challenges from "./data/challenges";
@@ -96,6 +98,8 @@ function App() {
         />
         <Route path="/letters-list" element={<CreditLetterList creditLetters={creditLetters}/>} />
         <Route path="/addletter" element={<AddLetter templates={creditRepairTemplates} />} />
+        <Route path="/chatbox" element={<Chatbox />} />
+        <Route path="/file-upload" element={<FileUpload />} />
       </Routes>
     </Router>
   );

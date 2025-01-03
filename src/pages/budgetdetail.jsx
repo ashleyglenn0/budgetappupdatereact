@@ -31,7 +31,7 @@ const BudgetDetail = ({ budgets, onUpdateBudget }) => {
   function handleOpenEditModal() {
     console.log("Edit Budget button clicked");
     setIsEditModalOpen(true);
-    console.log("Is Edit Modal Open: ", isEditModalOpen)
+    console.log("Is Edit Modal Open: ", isEditModalOpen);
   }
 
   // Close the edit budget modal
@@ -53,6 +53,17 @@ const BudgetDetail = ({ budgets, onUpdateBudget }) => {
   const handleEditSave = (updatedBudget) => {
     onUpdateBudget(updatedBudget); // Pass updated budget to parent
     handleCloseEditModal();
+  };
+
+  const handleGeneratePDF = () => {
+    const content = `
+      Budget Name: ${budget.name}
+      Description: ${budget.description}
+      Total Income: ${budget.totalIncome}
+      Total Expenses: ${budget.totalExpenses}
+      Remaining Balance: ${budget.remainingBalance}
+    `;
+    generatePDF(content, `Budget_${budget.name}`);
   };
 
   return (
@@ -166,15 +177,16 @@ const BudgetDetail = ({ budgets, onUpdateBudget }) => {
           >
             Add Expense
           </button>
-          <button
-            onClick={handleOpenEditModal}
-            className="action-button"
-          >
+          <button onClick={handleOpenEditModal} className="action-button">
             Edit Budget
           </button>
           <Link to="/budgets">
             <button className="action-button">Back</button>
           </Link>
+
+          <button onClick={handleGeneratePDF} className="action-button">
+            Download Budget as PDF
+          </button>
         </div>
 
         {/* Footer */}

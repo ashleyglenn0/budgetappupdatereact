@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+
+import { generatePDF } from "../utils/pdfGenerator";
+
 import "../styles/creditletterlist.css";
 
 const CreditLetterList = ({ creditLetters }) => {
@@ -26,6 +29,20 @@ const CreditLetterList = ({ creditLetters }) => {
       default:
         return "";
     }
+  };
+
+  const handleGenerateLetterPDF = (letter) => {
+    const content = `
+      Letter Type: ${letter.type}
+      Recipient: ${letter.recipient}
+      Date Sent: ${new Date(letter.dateSent).toLocaleDateString()}
+      Expected Response Date: ${new Date(letter.expectedResponseDate).toLocaleDateString()}
+      Status: ${letter.status}
+      
+      Content:
+      ${letter.content}
+    `;
+    generatePDF(content, `Letter_${letter.recipient}_${letter.dateSent}`);
   };
 
   return (
@@ -57,6 +74,9 @@ const CreditLetterList = ({ creditLetters }) => {
                 onClick={() => handleDelete(letter.id)}
               >
                 🗑️
+              </button>
+              <button onClick={() => handleGenerateLetterPDF(letter)} className="action-button">
+                Download Letter as PDF
               </button>
             </div>
           </div>

@@ -138,29 +138,55 @@ const Dashboard = ({
             ))}
           </ul>
         </div>
+        {/*Link to free credit report */}
+        <div className="card">
+          <h1>Access Your Credit Report</h1>
+          <p>
+            You are entitled to one free credit report from each credit bureau
+            every year.
+          </p>
+          <a
+            href="https://www.freeannualcreditreport.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button"
+          >
+            Get My Free Credit Report
+          </a>
+        </div>
 
         {/* Actions Section */}
-        <div className="card">
+        <div className="actions-container">
           <h2>Actions</h2>
-          <div className="actions-grid">
-            <Link to="/addbudget">
-              <button className="action-button">Create/Add Budget</button>
-            </Link>
-            <Link to="/addletter">
-              <button className="action-button">Create/Add Letters</button>
-            </Link>
-            <Link to="/challenge-list">
-              <button className="action-button">Join More Challenges</button>
-            </Link>
-            <Link to="/budgets">
-              <button className="action-button">View All Budgets</button>
-            </Link>
-            <Link to="/letters-list">
-              <button className="action-button">View All Letters</button>
-            </Link>
-            <Link to="/challenge-progress">
-              <button className="action-button">View Challenge Progress</button>
-            </Link>
+
+          {/* Budgets Section */}
+          <div className="action-group">
+            <h3>Budgets</h3>
+            <Link to="/addbudget"><button className="action-button">Create/Add Budget</button></Link>
+            <Link to="/budgets"><button className="action-button">View All Budgets</button></Link>
+          </div>
+
+          {/* Letters Section */}
+          <div className="action-group">
+            <h3>Letters</h3>
+            <Link to="/addletter"><button className="action-button">Create/Add Letters</button></Link>
+            <Link to="/letters-list"><button className="action-button">View All Letters</button></Link>
+          </div>
+
+          {/* Challenges Section */}
+          <div className="action-group">
+            <h3>Challenges</h3>
+            <Link to="/challenge-list"><button className="action-button">Join More Challenges</button></Link>
+            <Link to="/challenge-progress"><button className="action-button">View Challenge Progress</button></Link>
+          </div>
+
+          {/* Extras Section */}
+          <div className="action-group">
+            <h3>Extras</h3>
+            <Link to="/chatbox"><button className="action-button">
+              Get Personalized Recommendations
+            </button></Link>
+            <Link to="/file-upload"><button className="action-button">Upload/View Documents</button></Link>
           </div>
         </div>
       </div>
