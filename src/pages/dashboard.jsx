@@ -146,7 +146,7 @@ const Dashboard = ({
             every year.
           </p>
           <a
-            href="https://www.freeannualcreditreport.com"
+            href="https://www.annualcreditreport.com/index.action"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-button"
