@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
+
+import PrivateRoute from "./components/PrivateRoute";
+
 import LandingPage from "./pages/landingpage";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
@@ -45,22 +48,11 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route
-          path="/dashboard"
-          element={
-            <Dashboard
-              firstName="John"
-              globalChallengeName="Save More Month"
-              upcomingPayments={["$200 Rent", "$50 Electricity"]}
-              upcomingIncome="$500 Salary"
-              firstLetterStatus="Sent"
-              topSavingsChallenge={{ name: "Emergency Fund", progress: 80 }}
-              challenges={enrolledChallenges}
-              points={3500}
-              status="Gold"
-            />
-          }
-        />
+         {/* Private Routes */}
+         <Route path="/app" element={<PrivateRoute />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="challenge-list" element={<ChallengeList />} />
+        </Route>
         <Route path="/budgets" element={<BudgetList budgets={budgets} />} />
         <Route
           path="/budget/:id"
@@ -87,7 +79,7 @@ function App() {
             <ChallengeProgress enrolledChallenges={enrolledChallenges} />
           }
         />
-        <Route
+        {/* <Route
           path="/challenge-list"
           element={
             <ChallengeList
@@ -95,9 +87,15 @@ function App() {
               globalChallenges={globalChallenges}
             />
           }
+        /> */}
+        <Route
+          path="/letters-list"
+          element={<CreditLetterList creditLetters={creditLetters} />}
         />
-        <Route path="/letters-list" element={<CreditLetterList creditLetters={creditLetters}/>} />
-        <Route path="/addletter" element={<AddLetter templates={creditRepairTemplates} />} />
+        <Route
+          path="/addletter"
+          element={<AddLetter templates={creditRepairTemplates} />}
+        />
         <Route path="/chatbox" element={<Chatbox />} />
         <Route path="/file-upload" element={<FileUpload />} />
       </Routes>

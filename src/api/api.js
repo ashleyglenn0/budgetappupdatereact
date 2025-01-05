@@ -1,7 +1,8 @@
-import axios from 'axios';
+import { axiosInstance } from "./axios";
 
-const api = axios.create({
-  baseURL: 'http://localhost:8080', // Your Spring backend base URL
-});
+// Example API call functions
+export const login = (formData) => axiosInstance.post("/auth/login", formData);
 
-export default api;
+export const fetchDashboardData = (apiUrl) => {
+  return axiosInstance.get(apiUrl);
+};

@@ -227,6 +227,27 @@
   .unenroll-button:hover {
     background-color: #ff6f61;
   }
+
+  .no-challenges {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .join-challenge-button {
+    background-color: #ffb6c1;
+    color: #4a4a4a;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .join-challenge-button:hover {
+    background-color: #ff9aa2;
+    color: white;
+  }
+  
   
   
   

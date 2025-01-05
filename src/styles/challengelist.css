@@ -73,6 +73,17 @@
     overflow-y: auto;
     height: calc(100vh - 160px); /* Adjust height based on navbar and footer */
   }
+
+  .global-badge {
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+  
   
   /* Responsive Design */
   @media (max-width: 768px) {
